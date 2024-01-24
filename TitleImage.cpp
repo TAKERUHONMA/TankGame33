@@ -12,7 +12,7 @@ TitleImage::~TitleImage()
 
 void TitleImage::Initialize()
 {
-	hPict_ = Image::Load("");
+	hPict_ = Image::Load("Mous.png");
 	assert(hPict_ >= 0);
 }
 
