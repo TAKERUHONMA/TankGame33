@@ -2,12 +2,13 @@
 #include "Engine/GameObject.h"
 
 class Text;
-class TitleScene :
-    public GameObject
+class GameClear
+    :public GameObject
 {
+    int hPict_;
     Text* pText;
 public:
-    TitleScene(GameObject* parent);
+    GameClear(GameObject* parent);
 
     //‰Šú‰»
     void Initialize() override;

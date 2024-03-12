@@ -2,12 +2,13 @@
 #include "Ground.h"
 #include "Enemy.h"
 #include "Engine/Text.h"
+#include "Engine/SceneManager.h"
 #include "Tank.h"
 #include "HUD.h"
 
 namespace
 {
-	const int ENEMY_NUM{ 30 };
+	const int ENEMY_NUM{ 1 };
 }
 
 PlayScene::PlayScene(GameObject* parent)
@@ -33,6 +34,11 @@ void PlayScene::Initialize()
 
 void PlayScene::Update()
 {
+	if (enemyNum == 0)
+	{
+		SceneManager* pSM = (SceneManager*)FindObject("SceneManager");
+		pSM->ChangeScene(SCENE_ID_GAMECLEAR);
+	}
 }
 
 void PlayScene::Draw()

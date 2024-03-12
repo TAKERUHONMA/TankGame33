@@ -11,7 +11,7 @@ HUD::HUD(GameObject* parent)
 
 void HUD::Initialize()
 {
-	hHUD_ = Image::Load("hud02.png");
+	hHUD_ = Image::Load("zanki.png");
 	assert(hHUD_ >= 0);
 	hNumbers_ = Image::Load("number.png");
 	assert(hHUD_ >= 0);
