@@ -3,6 +3,7 @@
 #include "Enemy.h"
 #include "Engine/Text.h"
 #include "Tank.h"
+#include "HUD.h"
 
 namespace
 {
@@ -25,7 +26,8 @@ void PlayScene::Initialize()
 
 	pText = new Text;
 	pText->Initialize();
-	
+
+	Instantiate<HUD>(this);
 
 }
 

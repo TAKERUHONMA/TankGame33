@@ -17,7 +17,7 @@ Bullet::~Bullet()
 
 void Bullet::Initialize()
 {
-	hModel_ = Model::Load("");
+	hModel_ = Model::Load("Bullet.fbx");
 	assert(hModel_ >= 0);
 
 	SphereCollider* collider = new SphereCollider(XMFLOAT3(0, 0, 0), 0.3);

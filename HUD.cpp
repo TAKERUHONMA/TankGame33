@@ -11,9 +11,9 @@ HUD::HUD(GameObject* parent)
 
 void HUD::Initialize()
 {
-	hHUD_ = Image::Load("life.png");
+	hHUD_ = Image::Load("hud02.png");
 	assert(hHUD_ >= 0);
-	hNumbers_ = Image::Load("");
+	hNumbers_ = Image::Load("number.png");
 	assert(hHUD_ >= 0);
 
 }
@@ -39,6 +39,15 @@ void HUD::Draw()
 	Transform trans;
 	trans.scale_ = { 0.5, 0.5, 1.0 };
 	trans.position_ = { 0.6, 0.855, 0 };
+
+	//Image::SetRect(hNumbers_, 51.2 * 9, 0, 51.2, 99);
+	//Image::SetTransform(hNumbers_, trans);
+	//Image::Draw(hNumbers_);
+
+	trans.position_ = { -0.57,0.855,0 };
+	Image::SetRect(hNumbers_, 51.2 * 6, 0, 51.2, 99);
+	Image::SetTransform(hNumbers_, trans);
+	Image::Draw(hNumbers_);
 }
 
 void HUD::Release()
