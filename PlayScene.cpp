@@ -8,7 +8,7 @@
 
 namespace
 {
-	const int ENEMY_NUM{ 1 };
+	const int ENEMY_NUM{ 30 };
 }
 
 PlayScene::PlayScene(GameObject* parent)
